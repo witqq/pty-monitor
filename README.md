@@ -27,7 +27,7 @@ This breaks Copilot CLI, terminal emulators, SSH sessions, and any other tool th
 | 2 | **Alert** with per-process breakdown | Any copilot process with >150 leaked ptmx FDs |
 | 3 | **Alert** with restart recommendation | Total PTY usage >80% of `kern.tty.ptmx_max` |
 
-Alerts go to macOS Notification Center and optionally Telegram (via `notify-telegram` if available).
+Alerts go to macOS Notification Center. If [`notify-telegram`](https://github.com/witqq/telegram-notifier) is found in `$PATH`, alerts are also sent to Telegram (optional, no hard dependency).
 
 Alerts have a 30-minute cooldown to avoid spam.
 
